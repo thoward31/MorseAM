@@ -41,7 +41,9 @@ class Morse{
     
     public function decodeString($string)
     {
-        $stringa = str_replace($this->a, "a", $string);
+        $stringlower = strtolower($string);
+        
+        $stringa = str_replace($this->a, "a", $stringlower);
         $stringb = str_replace($this->b, "b", $stringa);
         $stringc = str_replace($this->c, "c", $stringb);
         $stringd = str_replace($this->d, "d", $stringc);
