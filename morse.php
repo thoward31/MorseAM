@@ -40,10 +40,8 @@ class Morse{
     private $n0 = "----- ";
     
     public function decodeString($string)
-    {
-        $stringlower = strtolower($string);
-        
-        $stringa = str_replace($this->a, "a", $stringlower);
+    {        
+        $stringa = str_replace($this->a, "a", $string);
         $stringb = str_replace($this->b, "b", $stringa);
         $stringc = str_replace($this->c, "c", $stringb);
         $stringd = str_replace($this->d, "d", $stringc);
@@ -85,8 +83,9 @@ class Morse{
     
     public function encodeString($string)
     {
+        $stringlower = strtolower($string);
         
-        $stringa = str_replace("a", $this->a, $string);
+        $stringa = str_replace("a", $this->a, $stringlower);
         $stringb = str_replace("b", $this->b, $stringa);
         $stringc = str_replace("c", $this->c, $stringb);
         $stringd = str_replace("d", $this->d, $stringc);
