@@ -39,6 +39,112 @@ class Morse{
     private $n9 = "----. ";
     private $n0 = "----- ";
     
+    private $code = array(
+        // roman alphabet
+        "a" => ".- ",
+        "b" => "-... ",
+        "c" => ,
+        "d" => ,
+        "e" => ,
+        "f" => ,
+        "g" => ,
+        "h" => ,
+        "i" => ,
+        "j" => ,
+        "k" => ,
+        "l" => ,
+        "m" => ,
+        "n" => ,
+        "o" => ,
+        "p" => ,
+        "q" => ,
+        "r" => ,
+        "s" => ,
+        "t" => ,
+        "u" => ,
+        "v" => ,
+        "w" => ,
+        "x" => ,
+        "y" => ,
+        "z" => ,
+        
+        // numbers
+        "0" => ,
+        "1" => ,
+        "2" => ,
+        "3" => ,
+        "4" => ,
+        "5" => ,
+        "6" => ,
+        "7" => ,
+        "8" => ,
+        "9" => ,
+        
+        // special letters
+        "ä" => ".-.- ",
+        "" => ,
+        "" => ,
+        "Ch" => "---- ",
+        "é" => "..-.. ",
+        "ñ" => "--.-- ",
+        "ö" => "---. ",
+        "ü" => "..-- ",
+        
+        // punctuation
+        "." => ".-.-.- ",
+        "," => "--..-- ",
+        ";" => "---... ",
+        "?" => "..--.. ",
+        "'" => ".----. ",
+        "\"" => "-....- ",
+        "/"  => "-..-. ",
+        "\\" => "-..-. ",
+        "(" => "-.--.- ",
+        ")" => "-.--.- ",
+        "'" => ".-..-. ",
+        "@" => ".--.-. ",
+        "=" => "-...- ",
+        
+        // prosign
+        "AA" => ".-.- ", // NEW LINE
+        "AR" => ".-.-. ", // END OF MESSAGE
+        "AS" => ".-... ", // WAIT
+        "BK" => "-...-.- ", // BREAK
+        "BT" => "-...- ", // NEW PARAGRAPH
+        "CL" => "-.-..-.. ", // CLEAR (going off the air)
+        "CT" => "-.-.- ", // START COPYING
+        "DO" => "-..--- ", // CHANGE TO WABUN CODE
+        "KN" => "-.--. ", // INVITE SPECIFIC STATION TO TRANSMIT
+        "SK" => "...-.- ", // END OF TRANSMISSION
+        "SN" => "...-. ", // UNDERSTOOD
+        "SOS" => "...---... ", // SOS
+        
+        // source : https://morsecode.scphillips.com/morse.html
+    );
+    
+    /* Temporarily commented until other issues are resolved, but this should ultimately replace the current encode and decode functions
+     *  
+    public function decodeString($string)
+    {
+        foreach($this->code as $key => $value)
+        {
+            $stringfin = str_replace($value,$key,$string);
+            $string = $stringfin;
+        }
+        return $stringfin;
+    }
+    
+    public function encodeString($string)
+    {
+        foreach($this->code as $key => $value)
+        {
+            $stringfin = str_replace($key,$value,$string);
+            $string = $stringfin;
+        }
+        return $stringfin;
+    }
+     * */
+    
     public function decodeString($string)
     {        
         $stringa = str_replace($this->a, "a", $string);
