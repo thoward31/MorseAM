@@ -1,6 +1,7 @@
 <?php
 
 include 'morse.php';
+include 'LED.php';
 
 $morsecode = new Morse();
 $led = new LED();
@@ -20,7 +21,7 @@ if( isset($_POST["message"]) ){
         echo json_encode($responsearr);
         exit;
     }
-    elseif{strlen($plaintxt) >= $maxlength}
+    elseif(strlen($plaintxt) >= $maxlength)
     {
         $status = "Failed";
         $responsearr = array( "status" => $status,

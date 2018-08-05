@@ -39,6 +39,7 @@ class Morse{
     private $n9 = "----. ";
     private $n0 = "----- ";
     
+    /*
     private $code = array(
         // roman alphabet
         "a" => ".- ",
@@ -120,7 +121,7 @@ class Morse{
         "SOS" => "...---... ", // SOS
         
         // source : https://morsecode.scphillips.com/morse.html
-    );
+    ); */
     
     /* Temporarily commented until other issues are resolved, but this should ultimately replace the current encode and decode functions
      *  
